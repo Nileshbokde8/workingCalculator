@@ -81,22 +81,22 @@
          <button class="line-1 line-11" onclick="clickvalues(7)">7</button>
          <button class="line-1 line-11" onclick="clickvalues(8)">8</button>
          <button class="line-1 line-11" onclick="clickvalues(9)">9</button>
-         <button class="line-1 color" onclick="clickvalues('DEL')">DEL</button>
-         <button class="line-1 color" onclick="clickvalues('AC')">AC</button>
+         <button class="line-1 color" onclick="back()">DEL</button>
+         <button class="line-1 color" onclick="clearscreen()">AC</button>
          
          </div>
          <div class="button">
             <button class="line-1 line-11" onclick="clickvalues(4)">4</button>
             <button class="line-1 line-11" onclick="clickvalues(5)">5</button>
             <button class="line-1 line-11" onclick="clickvalues(6)">6</button>
-            <button class="line-1 color" onclick="clickvalues('x')">x</button>
+            <button class="line-1 color" onclick="clickvalues('*')">*</button>
             <button class="line-1 color" onclick="clickvalues('/')">/</button>
             
             </div>
             <div class="button">
                 <button class="line-1 line-11" onclick="clickvalues(1)">1</button>
                 <button class="line-1 line-11" onclick="clickvalues(2)">2</button>
-                <button class="line-1 line-11" onclick="clickvalues3()">3</button>
+                <button class="line-1 line-11" onclick="clickvalues(3)">3</button>
                 <button class="line-1 color" onclick="clickvalues('+')">+</button>
                 <button class="line-1 color" onclick="clickvalues('-')">-</button>
                 
@@ -105,8 +105,8 @@
                     <button class="line-1 line-11" onclick="clickvalues(0)">0</button>
                     <button class="line-1 line-11 color" onclick="clickvalues('10*')">10*</button>
                     <button class="line-1 line-11 color" onclick="clickvalues('.')">.</button>
-                    <button class="line-1 color" onclick="clickvalues('Ans')">Ans</button>
-                    <button class="line-1 color" onclick="clickvalues('=')">=</button>
+                    <button class="line-1 color" onclick="calculateans()">Ans</button>
+                    <button class="line-1 color" onclick="calculate()">=</button>
                     
                     </div>
     
@@ -116,9 +116,25 @@
 
                     function clickvalues(value){
                         const inputbox=document.getElementById("textbox");
-                        inputbox.value = value;
-                        
-
+                        inputbox.value = (inputbox.value + value);
+                    }
+                    function clearscreen(){
+                        const inputbox=document.getElementById("textbox");
+                        inputbox.value = ""
+                    }
+                    function back(){
+                        const inputbox=document.getElementById("textbox");
+                        inputbox.value = ""
+                    }
+                    function calculate(){
+                        const inputbox=document.getElementById("textbox");
+                       const answer =eval (inputbox.value);
+                       inputbox.value=answer;
+                    }
+                    function calculateans(){
+                        const inputbox=document.getElementById("textbox");
+                       const answer =eval (inputbox.value);
+                       inputbox.value="Ans= " +answer;
                     }
 
 
