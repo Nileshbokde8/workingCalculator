@@ -76,40 +76,59 @@
         <div class="calculator">
             <h3 style="text-align:center; color:white; font-family: Arial, Helvetica, sans-serif; font-weight: bolder; font-size: 40px;" >CASIO</h3>
             
-         <input class="text" type="text" />
+         <input class="text" type="text" id="textbox"/>
          <div class="button">
-         <button class="line-1 line-11">7</button>
-         <button class="line-1 line-11 ">8</button>
-         <button class="line-1 line-11">9</button>
-         <button class="line-1 color">DEL</button>
-         <button class="line-1 color">AC</button>
+         <button class="line-1 line-11" onclick="clickvalues(7)">7</button>
+         <button class="line-1 line-11" onclick="clickvalues(8)">8</button>
+         <button class="line-1 line-11" onclick="clickvalues(9)">9</button>
+         <button class="line-1 color" onclick="clickvalues('DEL')">DEL</button>
+         <button class="line-1 color" onclick="clickvalues('AC')">AC</button>
          
          </div>
          <div class="button">
-            <button class="line-1 line-11">4</button>
-            <button class="line-1 line-11 ">5</button>
-            <button class="line-1 line-11">6</button>
-            <button class="line-1 color">x</button>
-            <button class="line-1 color">/</button>
+            <button class="line-1 line-11" onclick="clickvalues(4)">4</button>
+            <button class="line-1 line-11" onclick="clickvalues(5)">5</button>
+            <button class="line-1 line-11" onclick="clickvalues(6)">6</button>
+            <button class="line-1 color" onclick="clickvalues('x')">x</button>
+            <button class="line-1 color" onclick="clickvalues('/')">/</button>
             
             </div>
             <div class="button">
-                <button class="line-1 line-11">1</button>
-                <button class="line-1 line-11 ">2</button>
-                <button class="line-1 line-11">3</button>
-                <button class="line-1 color">+</button>
-                <button class="line-1 color">-</button>
+                <button class="line-1 line-11" onclick="clickvalues(1)">1</button>
+                <button class="line-1 line-11" onclick="clickvalues(2)">2</button>
+                <button class="line-1 line-11" onclick="clickvalues3()">3</button>
+                <button class="line-1 color" onclick="clickvalues('+')">+</button>
+                <button class="line-1 color" onclick="clickvalues('-')">-</button>
                 
                 </div>
                 <div class="button">
-                    <button class="line-1 line-11">0</button>
-                    <button class="line-1 line-11 color ">10*</button>
-                    <button class="line-1 line-11 color">.</button>
-                    <button class="line-1 color">Ans</button>
-                    <button class="line-1 color">=</button>
+                    <button class="line-1 line-11" onclick="clickvalues(0)">0</button>
+                    <button class="line-1 line-11 color" onclick="clickvalues('10*')">10*</button>
+                    <button class="line-1 line-11 color" onclick="clickvalues('.')">.</button>
+                    <button class="line-1 color" onclick="clickvalues('Ans')">Ans</button>
+                    <button class="line-1 color" onclick="clickvalues('=')">=</button>
                     
                     </div>
     
         </div>
+
+                <script type="text/javascript">
+
+                    function clickvalues(value){
+                        const inputbox=document.getElementById("textbox");
+                        inputbox.value = value;
+                        
+
+                    }
+
+
+
+
+
+
+
+
+                </script>
+
     </body>
 </html>
