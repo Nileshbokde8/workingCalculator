@@ -103,7 +103,7 @@
                 </div>
                 <div class="button">
                     <button class="line-1 line-11" onclick="clickvalues(0)">0</button>
-                    <button class="line-1 line-11 color" onclick="clickvalues('10*')">10*</button>
+                    <button class="line-1 line-11 color" onclick="clickvalues('%')">%</button>
                     <button class="line-1 line-11 color" onclick="clickvalues('.')">.</button>
                     <button class="line-1 color" onclick="calculateans()">Ans</button>
                     <button class="line-1 color" onclick="calculate()">=</button>
@@ -122,9 +122,10 @@
                         const inputbox=document.getElementById("textbox");
                         inputbox.value = ""
                     }
+
                     function back(){
                         const inputbox=document.getElementById("textbox");
-                        inputbox.value = ""
+                        inputbox.value = inputbox.value.slice(0,-1);
                     }
                     function calculate(){
                         const inputbox=document.getElementById("textbox");
@@ -136,13 +137,6 @@
                        const answer =eval (inputbox.value);
                        inputbox.value="Ans= " +answer;
                     }
-
-
-
-
-
-
-
 
                 </script>
 
