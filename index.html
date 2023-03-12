@@ -122,7 +122,8 @@
                         const inputbox=document.getElementById("textbox");
                         inputbox.value = ""
                     }
-
+                    
+                    //slice(0,-1); is used to back a values
                     function back(){
                         const inputbox=document.getElementById("textbox");
                         inputbox.value = inputbox.value.slice(0,-1);
@@ -132,6 +133,8 @@
                        const answer =eval (inputbox.value);
                        inputbox.value=answer;
                     }
+
+                    //eval is an inbuilt function to calcualate expression-->
                     function calculateans(){
                         const inputbox=document.getElementById("textbox");
                        const answer =eval (inputbox.value);
